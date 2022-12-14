@@ -8,6 +8,9 @@ img = cv2.imread(path)
 
 def mousePoints (event, x, y, flags, params):
     if event == cv2.EVENT_LBUTTONDOWN:
+        size = len(pointslst)
+        if size != 0 and size %3 == 0:
+            cv2.line(img, tuple(pointslst[round(((size-1)/3)*3)]), (x, y), (0, 0, 255), 2)
         cv2.circle(img, (x, y), 5, (0, 0, 255), cv2.FILLED)
         pointslst.append([x, y])
         print(pointslst)
@@ -22,7 +25,7 @@ def getAngle(pointslst):
     m2 = gradient(pt1, pt3)
     angR = math.atan((m2-m1)/(1+(m2*m1)))
     angD = round(math.degrees(angR))
-    print(angD)
+    cv2.putText(img, str(angD), (pt1[0]-40, pt1[1]-20), cv2.FONT_HERSHEY_PLAIN, 1.5, (0, 0, 255), 2)
 
 while True:
     if len(pointslst) % 3 == 0 and len(pointslst) != 0:
