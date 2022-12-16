@@ -47,6 +47,23 @@ class FaceMeshDetector():
 
         return img, faces
 
+    def findDistance(self,p1, p2, img=None):
+        x1, y1 = p1
+        x2, y2 = p2
+        
+        cx, cy = (x1 + x2) // 2, (y1 + y2) // 2
+        length = math.hypot(x2 - x1, y2 - y1)
+        info = (x1, y1, x2, y2, cx, cy)
+        
+        if img is not None:
+            cv2.circle(img, (x1, y1), 15, (255, 0, 255), cv2.FILLED)
+            cv2.circle(img, (x2, y2), 15, (255, 0, 255), cv2.FILLED)
+            cv2.line(img, (x1, y1), (x2, y2), (255, 0, 255), 3)
+            cv2.circle(img, (cx, cy), 15, (255, 0, 255), cv2.FILLED)
+            return length,info, img
+        else:
+            return length, info
+        
 def main():
     cTime, pTime = 0, 0
     cap = cv2.VideoCapture(0)
