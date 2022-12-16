@@ -40,7 +40,7 @@ class FaceMeshDetector():
                 for id, lm in enumerate(faceLm.landmark):
                     #print(lm)
                     ih, iw, ic = img.shape
-                    x, y = int(lm.x*iw), int(lm.y+ih)
+                    x, y = int(lm.x*iw), int(lm.y*ih)
                     #print(id, x, y)
                     face.append([x, y])
                 faces.append(face)
