@@ -16,6 +16,7 @@ class handDetector():
                                         self.detectionCon, self.trackCon)
         self.mpDraw = mp.solutions.drawing_utils
         self.lmList = []
+        self.f_tip = [4, 8, 12, 16, 20]
 
     def findHands(self, img, draw=True, flipType = True):
         imgRGB = cv2.cvtColor(img, cv2.COLOR_BGR2RGB)
@@ -85,7 +86,33 @@ class handDetector():
                     cv2.circle(img, (cx, cy), 10, (255, 0, 255), cv2.FILLED)
 
         return lmList
+        
+    def fingerCount(self, myHand):
+        
+        myhandType = myHand["Type"]
+        mylmList = myHand["lmList"]
 
+        if self.results.multi_hand_landmarks:
+            fingers = []
+            # Thumb
+            if myHandType == "Right":
+                if myLmList[self.f_tip[0]][0] > myLmList[self.f_tip[0] - 1][0]:
+                    fingers.append(1)
+                else:
+                    fingers.append(0)
+            else:
+                if myLmList[self.f_tip[0]][0] < myLmList[self.f_tip[0] - 1][0]:
+                    fingers.append(1)
+                else:
+                    fingers.append(0)
+
+            # For Fingers
+            for id in range(1, 5):
+                if myLmList[self.f_tip[id]][1] < myLmList[self.f_tip[id] - 2][1]:
+                    fingers.append(1)
+                else:
+                    fingers.append(0)
+        return fingers        
 
 def main():
     pTime = 0
