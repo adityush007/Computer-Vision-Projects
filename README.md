@@ -13,10 +13,10 @@ This contains projects related Computer Vision made using
 
 ## Minor Projects:
 - Includes Angle Measurement
-- Number Plate Reader using haarcasades 
+- Number Plate Reader using haarcasades
 
-[![](https://markdown-videos.deta.dev/youtube/{4LogwD3bBHA})](https://youtu.be/{4LogwD3bBHA})
+[![](https://markdown-videos.deta.dev/youtube/4LogwD3bBHA)](https://youtu.be/4LogwD3bBHA)
 
-[![](https://markdown-videos.deta.dev/youtube/{Qnsl4lMDNio})](https://youtu.be/{Qnsl4lMDNio})
+[![](https://markdown-videos.deta.dev/youtube/Qnsl4lMDNio)](https://youtu.be/Qnsl4lMDNio)
 
-[![](https://markdown-videos.deta.dev/youtube/{UOxKZABOZBw})](https://youtu.be/{UOxKZABOZBw})
+[![](https://markdown-videos.deta.dev/youtube/UOxKZABOZBw)](https://youtu.be/UOxKZABOZBw)
