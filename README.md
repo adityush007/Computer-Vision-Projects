@@ -12,11 +12,15 @@ This contains projects related to Computer Vision made using
 - Object detection using MobileNet, Coco dataset, etc.
 
 ## Minor Projects:
-- Includes Angle Measurement
-- Number Plate Reader using haarcasades
+- Includes Angle Measurement.
+- Number Plate Reader using haarcascades.
 
-[![Face Recognition Attendance Project]([\https://drive.google.com/file/d/19tTSChwDeuxCLjpaZJ31Qvx-lX80o3yW/view?usp=sharing])(https://youtu.be/4LogwD3bBHA "Click to Watch!")
+## Previews:
+1. Real-Time Face Recognition Attendance Project: <a href="https://youtu.be/4LogwD3bBHA">YouTube</a>
+   
+![ezgif com-gif-maker](https://github.com/adityush007/Computer-Vision-Projects/assets/79398033/ae4e5fc8-ac35-4ffd-8ac6-d970fbf0aa54)
 
-[![](https://markdown-videos.deta.dev/youtube/Qnsl4lMDNio)](https://youtu.be/Qnsl4lMDNio)
+2. Hand Distance Measurement Game: <a href = "https://youtu.be/UOxKZABOZBw">YouTube</a>
 
-[![](https://markdown-videos.deta.dev/youtube/UOxKZABOZBw)](https://youtu.be/UOxKZABOZBw)
+![ezgif com-crop](https://github.com/adityush007/Computer-Vision-Projects/assets/79398033/518c0535-502a-4991-86bd-d514199aa217)
+
